@@ -1,6 +1,6 @@
-function playGame(playerInput = 3){
+function playGame(playerInput = '1' + '2' + '3'){
     clearMessages()
-    playerMove = playerInput;
+    playerMove = getMoveName(playerInput);
     function getMoveName(argMoveId){
         if(argMoveId == 1){
         return 'kamień';
@@ -72,11 +72,11 @@ function playGame(playerInput = 3){
 }     
 
 document.getElementById(id='play-rock').addEventListener('click', function(){
-    playGame(playerInput = 1)('Zagrałem: ' + computerMove + 'Ty: ' + playerMove + displayResult)
+    playGame(1);
 });
 document.getElementById(id='play-paper').addEventListener('click', function(){
-    playGame(playerInput = 2)('Zagrałem: ' + computerMove + 'Ty: ' + playerMove + displayResult)
+    playGame(2);
 }); 
 document.getElementById(id='play-scissors').addEventListener('click', function(){
-    playGame(playerInput = 3)('Zagrałem: ' + computerMove + 'Ty: ' + playerMove + displayResult)
+    playGame(3);
 });   
