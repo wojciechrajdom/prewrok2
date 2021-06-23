@@ -1,4 +1,4 @@
-function playGame(playerInput = '1' + '2' + '3'){
+function playGame(playerInput){
     clearMessages()
     playerMove = getMoveName(playerInput);
     function getMoveName(argMoveId){
@@ -45,12 +45,12 @@ function playGame(playerInput = '1' + '2' + '3'){
     displayResult(computerMove, playerMove); 
 }     
 
-document.getElementById(id='play-rock').addEventListener('click', function(){
-    playGame(1);
+document.getElementById('play-rock').addEventListener('click', function(){
+    playGame('1');
 });
-document.getElementById(id='play-paper').addEventListener('click', function(){
-    playGame(2);
+document.getElementById('play-paper').addEventListener('click', function(){
+    playGame('2');
 }); 
-document.getElementById(id='play-scissors').addEventListener('click', function(){
-    playGame(3);
-});  
+document.getElementById('play-scissors').addEventListener('click', function(){
+    playGame('3');
+});   
