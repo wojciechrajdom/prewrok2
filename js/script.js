@@ -1,6 +1,6 @@
-{let playGame = function(playerInput){
+{const playGame = function(playerInput){
     clearMessages()
-    let getMoveName = function(argMoveId){
+    const getMoveName = function(argMoveId){
         if(argMoveId == 1){
         return 'kamień';
         }else if (argMoveId == 2){
@@ -24,7 +24,7 @@
 
     printMessage('Ty: ' + playerMove);
 
-    let displayResult = function(argComputerMove, argPlayerMove) {    
+    const displayResult = function(argComputerMove, argPlayerMove) {    
         
         if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
             printMessage('Ty wygrywasz!');
